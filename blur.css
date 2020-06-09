@@ -18,7 +18,7 @@ body{
 	width:800px;
 	display:flex;
 	justify-content:space-between; 
-	filter:url(#gooey);
+	filter: url(#Yashen);
 }
 .container .circle{
 	position:relative;
@@ -44,7 +44,6 @@ body{
 {
 	background:linear-gradient(90deg,#f00,#0ff);
 }
-
 .container .circle.circle2,
 .container .circle.circle2:before
 {
@@ -71,6 +70,7 @@ body{
 	}
 	
 }
+
 .container .circle.circle2{
 	animation: animate2 5s linear infinite;
 }
@@ -91,6 +91,7 @@ body{
 	}
 	
 }
+
 svg{
 	width:0;
 	height:0;
