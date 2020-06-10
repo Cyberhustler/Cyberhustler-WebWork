@@ -1,0 +1,45 @@
+
+
+body{
+    background:#333;
+    height:1500px;
+}
+.display-1, .lead{
+    color:white;
+    text-transform:uppercare;
+}
+
+.intro .product-wrapper{
+    position:relative;
+    display:inline-block;
+}
+
+.intro .product-wrapper img{
+     width:300px;
+}
+
+
+.intro .product-wrapper .scroll-stable{
+    position:relative;
+    z-index:99;
+    width:350px;
+}
+
+.intro .scroll-move{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    margin-left:-150px;
+}
+
+#desc a{
+    font-family:sans-serif;
+    color:white;
+    font-size:40px;
+    text-transform:uppercase;
+    text-decoration:none;
+}
+#desc p{
+    margin: 0 auto;
+    font-family:sans serif;
+}
