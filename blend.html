@@ -1,0 +1,27 @@
+        
+        <!doctype html>
+<html lang="en">
+  <head> 
+	  <title>Yashen Smooth Effects!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="blur.css">
+  </head>
+  <body>
+	  <h2>Made by : Yashen Naidu</h2>
+	<div class="container">
+		<div  class="circle circle1"></div>
+		<div  class="circle circle2"></div>
+	  </div>  
+	  <svg>
+		  <filter id="Yashen">
+		  	<feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+			<feColorMatrix values="
+			1 0 0 0 0
+			0 1 0 0 0
+			0 0 1 0 0
+			0 0 0 20 -10
+		   "/>
+		  </filter>
+	  </svg>
+  </body>
+</html>
