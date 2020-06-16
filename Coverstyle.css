@@ -25,10 +25,10 @@ header
     width:100vw;
 }
 header h1{
-    margin-top:-100px;
+    margin-top: -100px;
 }
 header, header:before {
-    background: 50% 50% /cover;
+    background: 50% 50% / cover;
 }
 header::before{
     bottom:0;
