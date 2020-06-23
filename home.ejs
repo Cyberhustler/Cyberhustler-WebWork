@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashens Portals</title>
+  
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="banner">
+        <!-- left side of template -->
+        <div class="left-box">
+            <div class="wrapper">
+                <img src="../img/robo-removebg-preview (2).png" class="logo" alt="">
+                 
+                    <button class="nutter" onclick="stafffunction()" type="submit">Staff Portal</button>
+                    <button class="nutter geor" onclick="regfunction()" type="submit">Register Portal</button>
+              <form class="login" action="/login" method="post" style="display: none;">
+                <div class="search-box">
+                        
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div class="search-box">
+                    
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <br>
+                <div class="ssub">
+                <button   type="submit">Login</button>
+            </div>
+            </form>
+            <form class="register"  action="/register" method="post" style="display: none;">
+                <div class="search-box">
+                        
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div class="search-box"> 
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <br>
+                <div class="ssub">
+                <button   type="submit">Register</button>
+            </div>
+            </form>
+                <div class="vertical-line"></div>
+
+                <ul>
+                    <li><a href="#">THE TEAM</a></li>
+                    <li><a href="#">THE IDEAS</a></li>
+                    <li><a href="#">THE WORKS</a></li>
+                    <li><a href="#">FACILITIES</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- right side of template -->
+        <div class="right-box">
+            <nav>
+                <ul>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">INSTALLATIONS</a></li>
+                </ul>
+            </nav>
+            <!-- <h2>YASHEN GENERATION</h2> -->
+            <h2>YASHENATICS
+            </h2>
+            <!-- Div Image covers -->
+            <div class="robot">
+                <img src="../img/tut.png" alt="">
+                <h1>FUTURE  CHANGE</h1>
+            </div>
+        </div>
+    </div>
+    <div class="smallCursor"></div>
+    <div class="lCursor"></div>
+    <script>
+        var small= document.querySelector(".smallCursor");
+        var large= document.querySelector(".lCursor"); 
+         document.onmousemove = function(e){
+            small.style.left = (e.pageX - 5)+ "px";
+            small.style.top = (e.pageY - 5)+ "px";
+            small.style.display ="block";
+         large.style.left = (e.pageX - 22)+ "px";
+         large.style.top = (e.pageY - 22)+ "px";
+         large.style.display ="block";
+        }
+        var f1 =   document.querySelector(".login");
+         var b1 = document.querySelector(".nutter");
+         var s1 = document.querySelector(".geor");
+         var f2 =   document.querySelector(".register");
+        function stafffunction(){ 
+        s1.style.display = "block";
+         b1.style.display = "none";
+         f1.style.display = "block";
+         f2.style.display = "none"; 
+       }
+       function regfunction(){ 
+        s1.style.display = "none";
+         b1.style.display = "block";
+         f1.style.display = "none";
+         f2.style.display = "block"; 
+       }
+       
+     </script>
+</body>
+</html>

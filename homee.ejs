@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashen Creation</title>
+    <link rel="stylesheet" href="../style1.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="left-box">
+            <div class="wrapper">
+                <img src="../img/robo-removebg-preview (2).png" class="logo" alt="">
+                <div class="search-box">
+                    <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16"   xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                      </svg>
+                      <input type="text" placeholder="Search">
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <ul>
+                    <li><a href="#">All Info</a></li>
+                    <li><a href="#">Work Together</a></li>
+                    <li><a href="#">Change</a></li>
+                    <li><a href="#">Practical Solutions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-box">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li>
+                        <a href="#">
+                            <form action="/logout" method="get">
+                                <button type="submit">LOGOUT</button>
+                            </form>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <h2>THE YASHEN <br> GENERATION</h2>
+
+            <div class="robot">
+                <img src="../img/you.png" alt="">
+                <h1>YASHENATICS</h1>
+                <div class="features">
+                    <div>
+                        <small>SEE YASHEN PREVIEWS!</small>
+                        <img src="../img/oppwq.jpg" alt="">
+                    </div>
+                    <div>
+                        <small>THE WORKING</small>
+                        <img src="../img/qw1.jpg" alt="">
+                    </div>
+                    <div>
+                        <small>DOWNLOAD CV</small>
+                        <img src="../img/qw.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="circle">
+
+            </div>
+            <div class="pagination">
+                <ul>
+                    <li class="active"><a href="#">01</a></li>
+                    <li><a href="#">02</a></li>
+                    <li><a href="#">03</a></li>
+                    <li><a href="#">04</a></li>
+                    <li><a href="#">05</a></li>
+                </ul>
+            </div>
+            <img src="../img/backmenu.jpg" alt="" class="volume">
+        </div>
+    </div>
+
+    <div class="smallCursor"></div>
+    <div class="lCursor"></div>
+    
+    <script>
+       var small= document.querySelector(".smallCursor");
+       var large= document.querySelector(".lCursor"); 
+
+
+       document.onmousemove = function(e){
+           small.style.left = (e.pageX - 5)+ "px";
+           small.style.top = (e.pageY - 5)+ "px";
+           small.style.display ="block";
+large.style.left = (e.pageX - 22)+ "px";
+        large.style.top = (e.pageY - 22)+ "px";
+        large.style.display ="block";
+       }
+
+     
+    
+    </script>
+</body>
+</html>
