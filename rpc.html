@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ROCK PAPER SCICORS</title>
+  <style>
+    body {
+
+  background-color: #CCC;
+	
+}
+
+ 
+
+.selections {
+
+  display: flex;
+
+  justify-content: center;
+	padding:212px;			
+}
+
+
+
+.selection {
+
+  background: none;
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  font-size: 2rem;
+
+  transition: 100ms;
+
+}
+
+
+
+.selection:hover {
+
+  transform: scale(1.2);
+
+}
+
+
+
+.results {
+
+  margin-top: 1rem;
+
+  display: grid;
+
+  justify-content: center;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+
+.result-score {
+
+  margin-left: .1rem;
+
+  font-size: .5rem;
+
+  color: #333;
+
+}
+
+
+
+.result-selection {
+
+  opacity: .5;
+
+}
+
+
+
+.result-selection.winner {
+
+  opacity: 1;
+
+  font-size: 1.5rem;
+
+}
+  </style>
+  <script>
+    const selectionButtons = document.querySelectorAll('[data-selection]')
+
+const finalColumn = document.querySelector('[data-final-column]')
+
+const computerScoreSpan = document.querySelector('[data-computer-score]')
+
+const yourScoreSpan = document.querySelector('[data-your-score]')
+
+const SELECTIONS = [
+
+  {
+
+    name: 'rock',
+
+    emoji: '✊',
+
+    beats: 'scissors'
+
+  },
+
+  {
+
+    name: 'paper',
+
+    emoji: '✋',
+
+    beats: 'rock'
+
+  },
+
+  {
+
+    name: 'scissors',
+
+    emoji: '✌',
+
+    beats: 'paper'
+
+  }
+
+]
+
+
+
+selectionButtons.forEach(selectionButton => {
+
+  selectionButton.addEventListener('click', e => {
+
+    const selectionName = selectionButton.dataset.selection
+
+    const selection = SELECTIONS.find(selection => selection.name === selectionName)
+
+    makeSelection(selection)
+
+  })
+
+})
+
+
+
+function makeSelection(selection) {
+
+  const computerSelection = randomSelection()
+
+  const yourWinner = isWinner(selection, computerSelection)
+
+  const computerWinner = isWinner(computerSelection, selection)
+
+
+
+  addSelectionResult(computerSelection, computerWinner)
+
+  addSelectionResult(selection, yourWinner)
+
+
+
+  if (yourWinner) incrementScore(yourScoreSpan)
+
+  if (computerWinner) incrementScore(computerScoreSpan)
+
+}
+
+
+
+function incrementScore(scoreSpan) {
+
+  scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+
+}
+
+
+
+function addSelectionResult(selection, winner) {
+
+  const div = document.createElement('div')
+
+  div.innerText = selection.emoji
+
+  div.classList.add('result-selection')
+
+  if (winner) div.classList.add('winner')
+
+  finalColumn.after(div)
+
+}
+
+
+
+function isWinner(selection, opponentSelection) {
+
+  return selection.beats === opponentSelection.name
+
+}
+
+
+
+function randomSelection() {
+
+  const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
+
+  return SELECTIONS[randomIndex]
+
+}
+  </script>
+</head>
+
+<body> 
+	<div>
+		<a href="/local">Location</a>
+	</div>
+  <div class="selections">
+    <button class="selection" data-selection="rock">✊</button>
+    <button class="selection" data-selection="paper">✋</button>
+    <button class="selection" data-selection="scissors">✌</button>
+  </div>
+
+  <div class="results">
+    <div>
+      You
+      <span class="result-score" data-your-score>0</span>
+    </div>
+	  
+    <div data-final-column>
+      Computer
+      <span class="result-score" data-computer-score>0</span>
+    </div>
+
+    <!-- <div class="result-selection winner">✊</div>
+
+    <div class="result-selection">✌</div> -->
+  </div>
+		 
+</body>
+</html>
