@@ -254,6 +254,9 @@ section
 	color:#fff;
 	text-decoration:none;
 }
+.content + a {
+  border-radius:50px;
+}
 @media (max-width:767px){
 	sectiom{
 		padding:40px;
