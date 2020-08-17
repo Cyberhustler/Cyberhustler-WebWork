@@ -25,12 +25,7 @@ section
 	color:#fff;
 } */
  
-.canvas1 {
-	position:Absolute;
-	width:100%;
-	height:100%;
-	
-}
+
 
 .header
 	{
@@ -311,4 +306,10 @@ section
 	color:#fff;
 	font-size:2em; 
      }
+}
+#canvas1 {
+	position:Absolute;
+	width:100%;
+	height:100%;
+	
 }
