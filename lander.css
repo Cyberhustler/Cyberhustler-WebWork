@@ -298,4 +298,8 @@ section
 		filter:invert(1);
 		max-width:30px;
 	}
+	.banner .content h2{
+	color:#fff;
+	font-size:2em; 
+     }
 }
