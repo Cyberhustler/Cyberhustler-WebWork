@@ -11,7 +11,9 @@ font-family: 'Roboto', sans-serif; */
 		box-sizing:border-box;
 		scroll-behavior:smooth;
 	}
-
+body{
+	background:#fff;
+}
 section
 	{
 		position: relative;
@@ -304,10 +306,10 @@ section
 	font-size:2em; 
      }
 }
-#canvas1 {
+/* #canvas1 {
 	position:Absolute;
 	top:0; left:0;
 	width:100%;
 	height:100%;
 	background :radial-gradient(orange,white);
-}
+} */
