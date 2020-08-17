@@ -89,6 +89,7 @@ section
 	background:#fff;
 	color:#111;
 	text-decoration:none;
+	border-radius:50px;
 }
 .fitBg{
 	position:absolute;
