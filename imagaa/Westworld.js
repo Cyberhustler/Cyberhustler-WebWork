@@ -29,8 +29,12 @@ Particle.prototype.update = function(){
     if(this.y + this.size > canvas.width || this.y - this.size < 0){
       this.directionY = -this.directionY;
     }
+  this.x += this.directionX;
+  this.y += this.directionY;
+  
     this.draw();
 }
+
 // create particle array 
     function init(){
       particleArray = [];
